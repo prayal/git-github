@@ -1,0 +1,242 @@
+Host	LocationId	MasterCompanyId	PolicyCompanyId	State	ClassCode	Code	SortOrder	Description	AcordCd	EffectiveDate	ExpirationDate	GeneratedInd	ActionCd	EmployerClassTypeCd
+PT	00	02	02	MA	5403	01	0	CARPENTRY NOC		1/1/1970 12:00:00 AM	5/1/2017 12:00:00 AM			
+
+
+ git remote add origin "https://github.com/prayal/git-github.git"
+----------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/prayal/git-github
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+-----------------------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git add edu1.txt
+----------------------------------------
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git commit -m "Added Training command file"
+[master 6223546] Added Training command file
+ 1 file changed, 16 insertions(+)
+ create mode 100644 edu1.txt
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$
+--------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu2.txt
+        edu3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+-----------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   edu1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu2.txt
+        edu3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+-------------------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git add -A
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   edu1.txt
+        new file:   edu2.txt
+        new file:   edu3.txt
+
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+----------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git commit -a -m "adding 3 files together"
+[master e360540] adding 3 files together
+ 3 files changed, 108 insertions(+)
+ create mode 100644 edu2.txt
+ create mode 100644 edu3.txt
+
+------------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git log
+commit e360540ac6e4fea403121c1b400de1976b2a56d7 (HEAD -> master)
+Author: Pankaj Rayal <pankajrayal@gmail.com>
+Date:   Mon Oct 23 21:07:41 2017 -0400
+
+    adding 3 files together
+
+commit 622354617b2559f53c37c759003781072b18300d
+Author: Pankaj Rayal <pankajrayal@gmail.com>
+Date:   Mon Oct 23 21:03:27 2017 -0400
+
+    Added Training command file
+
+commit 152d78d92f16aa5e218031d1073d187534748a83 (origin/master)
+Author: Pankaj Rayal <pankaj_rayal@outlook.com>
+Date:   Mon Oct 23 20:45:42 2017 -0400
+
+    Initial commit
+----------------------------------------------
+create branch
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git branch firstbranch
+-------------------------------------
+switch branch
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+-----------------------------------
+add file edu5.txt
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git commit -a -m "modifying edu4"
+[firstbranch e88fea9] modifying edu4
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+-----------------------
+add nnew file edu6
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ cat edu4.txt
+-------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$  git checkout firstbranch
+Switched to branch 'firstbranch'
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git add -A
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git commit -a -m "adding for rebasing"
+[firstbranch bf01b8a] adding for rebasing
+ 2 files changed, 265 insertions(+)
+ create mode 100644 edu5.txt
+ create mode 100644 edu6.txt
+---------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ ls
+edu1.txt  edu2.txt  edu3.txt  edu4.txt  edu5.txt  edu6.txt  README.md
+-------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ ls
+edu1.txt  edu2.txt  edu3.txt  edu4.txt  README.md
+---------------------------
+rebase
+$ clear
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git rebase master
+Current branch firstbranch is up to date.
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git rebase firstbranch
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to firstbranch.
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ ls
+edu1.txt  edu2.txt  edu3.txt  edu4.txt  edu5.txt  edu6.txt  README.md
+---------------------------------------------
+central repository
+step 1 generate ssh key
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/panka/.ssh/id_rsa):
+Created directory '/c/Users/panka/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/panka/.ssh/id_rsa.
+Your public key has been saved in /c/Users/panka/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:ZfV7ng6Ivy+Fu/eZWNccKyLRehHB23bSYm8XKXN7fgA panka@PANKAJ_LAPTOP
+The key's randomart image is:
++---[RSA 2048]----+
+|          ...    |
+|           o..   |
+|          o.o o .|
+|         o..EO B |
+|        S. o+.X.+|
+|          +.o..BB|
+|         + +oo.*B|
+|          +o..* *|
+|           +*o.=.|
++----[SHA256]-----+
+--------------------------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ cat /c/Users/panka/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0CjXBLtChdS8+l0aiIZyeDbMtMYeJ9UJp9DGe9Cs5EkpFSDnC963DMpIJA/7oybWfF9UmHNU3OYDsaGBUt16Q5UAgzSJ7INbEUks6h6sYDn5lwSM6xysgU8cveWMI5iSEqd6nFCN9PdvgvupDqWHo4X88KfxDAxehA6vQ8nFexmLmNW+8aUqj+S4NSKrG5dQVpn/iyXJY7zwJ+wVlU0g8SjcdrHPGAJw3NarHaAtYHMqesGUE6PFHxRg9RJfyfKtyXnvJBTHuL7kwZSPm01JSm0LteR4adVSqXRr5wScGeNRJoLZDAaapnPSgGOwodtdwJlIaLsYSIQ21bCOVK9Kj panka@PANKAJ_LAPTOP
+-------------------
+Go to person settings =>SSH andn GPG Keys
+---------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Hi prayal! You've successfully authenticated, but GitHub does not provide shell access.
+--------------------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git push origin firstbranch
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 2.60 KiB | 664.00 KiB/s, done.
+Total 18 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/prayal/git-github.git
+ * [new branch]      firstbranch -> firstbranch
+-----------------------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/prayal/git-github.git
+   152d78d..bf01b8a  master -> master
+
