@@ -122,4 +122,12 @@ $ git checkout firstbranch
 Switched to branch 'firstbranch'
 
 -----------------------------------
-
+merging
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git merge firstbranch
+Updating e360540..7bb4bdb
+Fast-forward
+ edu4.txt | 125 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 125 insertions(+)
+ create mode 100644 edu4.txt
+------------------------------------------
