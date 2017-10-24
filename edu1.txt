@@ -1,0 +1,16 @@
+Host	LocationId	MasterCompanyId	PolicyCompanyId	State	ClassCode	Code	SortOrder	Description	AcordCd	EffectiveDate	ExpirationDate	GeneratedInd	ActionCd	EmployerClassTypeCd
+PT	00	02	02	MA	5403	01	0	CARPENTRY NOC		1/1/1970 12:00:00 AM	5/1/2017 12:00:00 AM			
+
+
+ git remote add origin "https://github.com/prayal/git-github.git"
+----------------
+panka@PANKAJ_LAPTOP MINGW64 /e/Learning/GithubGitDemos (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/prayal/git-github
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+-----------------------------------------------
